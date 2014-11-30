@@ -1,0 +1,27 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+      %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+        %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+          %meta{:content => "", :name => "description"}
+            %meta{:content => "", :name => "author"}
+              %title Puntama Admin
+              / Bootstrap Core CSS
+              %link{:href => "/css/bootstrap.min.css", :rel => "stylesheet"}
+              / Custom CSS
+              %link{:href => "/css/sb-admin.css", :rel => "stylesheet"}
+              %link{:href => "/font-awesome-4.1.0/css/font-awesome.min.css", :rel => "stylesheet"}
+  %body
+    #wrapper
+      / Navigation
+      %nav.navbar.navbar-inverse.navbar-fixed-top{:role => "navigation"}
+        = partial_haml 'shared/header'
+        = partial_haml 'shared/menu'
+      #page-wrapper
+        .container-fluid
+          = yield
+  / jQuery Version 1.11.0
+  %script{:src => "/js/jquery-1.11.0.js"}
+  / Bootstrap Core JavaScript
+  %script{:src => "/js/bootstrap.min.js"}

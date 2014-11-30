@@ -1,0 +1,21 @@
+en:
+  admin:
+    menu:
+      home: 'Home'
+      categories: 'Categories'
+      products: 'Products'
+    categories:
+      title: 'Categories'
+      new:
+        title: 'New Category'
+        name: 'Category name'
+      edit:
+        title: 'Update Category %{name}'
+        name: 'New Category name'
+        button: 'Update'
+    products:
+      title: 'Products'
+      name: 'Name'
+      price: 'Price'
+      action: 'Action'
+      edit: 'Edit'

@@ -1,0 +1,11 @@
+.row
+  .col-lg-12
+    %h1.page-header
+      = I18n.t('admin.categories.edit.title', name: @category.name)
+.row
+  .col-lg-6
+    %form{action: "/admin/categories/#{@category.id}/update", method: 'post'}
+      .form-group
+        %label= I18n.t('admin.categories.edit.name')
+        %input.form-control{name: 'category[name]'}
+      %input{type: 'submit', value: I18n.t('admin.categories.edit.button'), class: 'btn btn-primary pull-right'}

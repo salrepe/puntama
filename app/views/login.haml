@@ -1,0 +1,6 @@
+= flash[:success]
+= flash[:error]
+%form{action: 'login', method:'post'}
+  %input{name: 'user[email]'}
+  %input{name: 'user[password]'}
+  %input{type: 'submit', value: 'Login'}

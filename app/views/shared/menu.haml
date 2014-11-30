@@ -1,0 +1,15 @@
+/ Sidebar Menu Items - These collapse to the responsive navigation menu on small screens
+.collapse.navbar-collapse.navbar-ex1-collapse
+  %ul.nav.navbar-nav.side-nav
+    %li.active
+      %a{:href => "/admin"}
+        %i.fa.fa-fw.fa-dashboard
+        = I18n.t('admin.menu.home')
+    %li
+      %a{:href => "/admin/categories"}
+        %i.fa.fa-fw.fa-bar-chart-o
+        = I18n.t('admin.menu.categories')
+    %li
+      %a{:href => "/admin/products/index"}
+        %i.fa.fa-fw.fa-table
+        = I18n.t('admin.menu.products')

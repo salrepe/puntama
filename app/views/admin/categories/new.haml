@@ -1,0 +1,11 @@
+.row
+  .col-lg-12
+    %h1.page-header
+      = I18n.t('admin.categories.new.title')
+.row
+  .col-lg-6
+    %form{action: '/admin/categories/create', method: 'post'}
+      .form-group
+        %label= I18n.t('admin.categories.new.name')
+        %input.form-control{name: 'category[name]'}
+      %input{type: 'submit', value: 'Save', class: 'btn btn-primary pull-right'}

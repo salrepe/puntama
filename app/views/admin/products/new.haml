@@ -1,0 +1,9 @@
+%form{action: 'create', method: 'post'}
+  %input{name: 'product[name]'}
+  %input{name: 'product[description]'}
+  %input{name: 'product[price]'}
+  %select{name: 'product[category_id]'}
+    - @categories.each do |category|
+      %option{value: category.id}
+        = category.name
+  %input{type: 'submit', value: 'Save'}

@@ -1,0 +1,24 @@
+.row
+  .col-lg-12
+    %h1.page-header
+      = I18n.t('admin.categories.title')
+      %small
+        %a{href: "/admin/categories/new"} Add new
+= flash[:success]
+.row
+  - @categories.each do |category|
+    .col-lg-3.col-md-6
+      .panel.panel-primary
+        .panel-heading
+          .row
+            .col-xs-3
+              %i.fa.fa-comments.fa-5x
+            .col-xs-9.text-left
+              .huge= category.name
+        %a{href: "/admin/categories/#{category.id}/edit", id: "edit_#{category.name}"}
+          .panel-footer
+            %span.pull-left Edit
+            %span.pull-right
+              %i.fa.fa-arrow-circle-right
+            .clearfix
+
